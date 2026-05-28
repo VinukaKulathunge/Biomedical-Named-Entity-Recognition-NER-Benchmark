@@ -1,0 +1,224 @@
+%-------------------------
+% Resume in Latex
+% Author : Jake Gutierrez
+% Based off of: https://github.com/sb2nov/resume
+% License : MIT
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\input{glyphtounicode}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\normalsize{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & #2 \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+%----------HEADING----------
+\begin{center}
+    \textbf{\Huge \scshape Vinuka Kulathunge} \\ \vspace{1pt}
+    \small +94 74 234 8805 $|$ \href{mailto:x@x.com}{\underline{vinukak@email.com}} $|$
+    \href{https://www.linkedin.com/in/vinuka-kulathunge-937b0421a/}{\underline{linkedin.com/in/vinuka-kulathunge}} $|$
+    \href{https://github.com/VinukaKulathunge}{\underline{github.com/VinukaKulathunge}}
+\end{center}
+
+%-----------SUMMARY-----------
+\section{Summary}
+Computer Science undergraduate specializing in artificial intelligence and machine learning, with hands-on experience across computer vision, NLP, and deep learning. Passionate about building intelligent systems and applying AI to real world problems.
+
+%-----------EDUCATION-----------
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {University of Peradeniya}{Peradeniya, Sri Lanka}
+      {Bachelor of Science Honours in Computer Science, Minors in Mathematics and Statistics}{2022 -- 2026 (Expected)}
+      \resumeItemListStart
+        \resumeItem{\textbf{Relevant Coursework:} Artificial Intelligence, Machine Learning, Natural Language Processing, Deep Learning \& Neural Networks, Computer Vision, Data Structures \& Algorithms}
+      \resumeItemListEnd
+    
+    \resumeSubheading
+      {Dharmaraja College}{Kandy, Sri Lanka}
+      {G.C.E. Advanced Level (Physical Sciences)}{2018 -- 2020}
+      \resumeItemListStart
+        \resumeItem{\textbf{Stream:} Combined Mathematics, Physics, Chemistry}
+      \resumeItemListEnd
+    
+    \resumeSubheading
+      {Lexicon International School}{Kandy, Sri Lanka}
+      {G.C.E. Ordinary Levels}{2005 -- 2018}
+      \resumeItemListStart
+        
+      \resumeItemListEnd
+  \resumeSubHeadingListEnd
+
+%-----------RESEARCH-----------
+\section{Research}
+    \resumeSubHeadingListStart
+      \resumeProjectHeading
+          {\textbf{Few-Shot Chest X-Ray Classification with Vision-Language Models (Ongoing)} $|$ \emph{University of Peradeniya}}{}
+          \resumeItemListStart
+            \resumeItem{Investigating few-shot disease classification on chest radiographs using CheXzero, BiomedCLIP, and BioViL-T on the Indiana University Chest X-ray dataset.}
+            \resumeItem{Proposed \textbf{Support Consistency Score (SCS)}, a prototype quality metric using mean pairwise cosine similarity to detect label noise without ground truth supervision.}
+            \resumeItem{Demonstrated that text-fused prototypes outperform image-only baselines and approach zero-shot performance at low support set sizes under label contamination.}
+            \resumeItem{Applied Patch-Text Similarity for CLIP-based models and GradCAM++ for BioViL-T to evaluate spatial grounding of few-shot predictions.}
+          \resumeItemListEnd
+    \resumeSubHeadingListEnd
+%-----------PROJECTS-----------
+\section{Projects}
+    \resumeSubHeadingListStart
+      \resumeProjectHeading
+          {\textbf{Biomedical Named Entity Recognition (NER) Benchmark Suite} $|$ \emph{PyTorch, Hugging Face, Transformers, pytorch-crf, Gensim, NLTK, Pandas}}{}
+          \resumeItemListStart
+            \resumeItem{Engineered a modular clinical named entity recognition pipeline evaluating **30 model configurations** (3 tokenizers $\times$ 5 embeddings $\times$ 2 classification layers) on the **BC5CDR** corpus.}
+            \resumeItem{Developed a robust **character-span token alignment algorithm** in Python, mapping original clinical tag offsets across subword (BPE), NLTK, and whitespace tokenizers with 100\% boundary fidelity.}
+            \resumeItem{Implemented and evaluated contextual **BERT feature extractors** and **contextualized ELMo BiLSTM layers** alongside corpus-fitted Word2Vec, GloVe, and FastText representations with seamless fallback modules.}
+            \resumeItem{Programmed sequence-level **Viterbi decoders (BiLSTM-CRF)** to enforce global transition path constraints and compared them against **Softmax** cross-entropy decoders, highlighting error reductions.}
+            \resumeItem{Developed an automated grid search runner that executes training, logs structured metric spreadsheets to CSV, and compiles a comprehensive Markdown analysis report.}
+          \resumeItemListEnd
+
+      \resumeProjectHeading
+          {\textbf{WhatToWatchNext} $|$ \emph{Python, FastAPI, Sentence-Transformers, ChromaDB, NetworkX}}{}
+          \resumeItemListStart
+            \resumeItem{Built hybrid recommendation engine combining all-MiniLM-L6-v2 vector search with NetworkX knowledge graph of directors, actors, and genres.}
+            \resumeItem{Designed edge-weighted scoring algorithm with XAI pipeline generating natural-language recommendation rationales.}
+          \resumeItemListEnd
+
+      \resumeProjectHeading
+          {\textbf{Tea Leaf Disease Classification via Transfer Learning} $|$ \emph{PyTorch, Torchvision, VGG16-BN, ResNet50}}{}
+          \resumeItemListStart
+            \resumeItem{Compared custom-headed VGG16-BN against fine-tuned ResNet50 for classifying tea leaf pathologies.}
+            \resumeItem{Applied class-weighted cross-entropy loss with Cosine Annealing and StepLR schedulers to address dataset imbalance.}
+          \resumeItemListEnd
+
+      \resumeProjectHeading
+          {\textbf{PHM Tweet Classification} $|$ \emph{TensorFlow, Keras, LSTM, Bi-LSTM, NLTK}}{}
+          \resumeItemListStart
+            \resumeItem{Built stacked LSTM and Bi-LSTM classifiers for Personal Health Mention detection on noisy social media text.}
+            \resumeItem{Stabilized training with SpatialDropout1D and gradient clipping; evaluated via F1-score and Precision-Recall curves.}
+          \resumeItemListEnd
+
+      \resumeProjectHeading
+          {\textbf{CSePS: Cryptographically Secure e-Procurement System} $|$ \emph{Python, Flask, Cryptography, pytest}}{}
+          \resumeItemListStart
+            \resumeItem{Implemented \textbf{Shamir's Secret Sharing} threshold decryption with \textbf{AES-256-GCM} and \textbf{ECDSA} signatures.}
+            \resumeItem{Designed tamper-evident audit ledger using \textbf{SHA-256} hash chaining with pytest validation.}
+          \resumeItemListEnd
+
+      \resumeProjectHeading
+          {\textbf{Modular Image Processing Toolkit} $|$ \emph{JavaScript, HTML5 Canvas, WebAssembly, CSS3}}{}
+          \resumeItemListStart
+            \resumeItem{Built browser-based image editor with 30-step history queue and 4-corner perspective correction.}
+            \resumeItem{Optimized spatial filters with sliding-window box-blur (linear time, 60 FPS) and integrated WebAssembly.}
+          \resumeItemListEnd
+
+      \resumeProjectHeading
+          {\textbf{Web Based Chess} $|$ \emph{JavaScript, Stockfish 10, Web Workers, HTML5 Canvas}}{}
+          \resumeItemListStart
+            \resumeItem{Integrated Stockfish 10 via Web Workers for off-main-thread engine calculations, maintaining 60 FPS.}
+            \resumeItem{Implemented real-time analysis with Canvas best-move visualizer and full chess rules.}
+          \resumeItemListEnd
+
+      \resumeProjectHeading
+          {\textbf{Secure Document Management System} (Group) $|$ \emph{Node.js, Express, PostgreSQL, Crypto}}{}
+          \resumeItemListStart
+            \resumeItem{Implemented AES-256 document encryption with RSA key exchange and RSA-SHA256 digital signatures.}
+            \resumeItem{Built document forwarding pipeline with chain-of-custody tracking and per-recipient re-encryption.}
+          \resumeItemListEnd
+
+      \resumeProjectHeading
+          {\textbf{Solar Panel IoT Telemetry System (Ongoing)} (Group) $|$ \emph{ESP32, FastAPI, SQLite, Python, JavaScript}}{}
+          \resumeItemListStart
+            \resumeItem{Building IoT monitoring system using ESP32 to capture voltage, current, power, and temperature.}
+            \resumeItem{Designing FastAPI backend for telemetry ingestion and dashboard for real-time visualization.}
+          \resumeItemListEnd
+    \resumeSubHeadingListEnd
+
+%-----------TECHNICAL SKILLS-----------
+\section{Technical Skills}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+     \textbf{Languages}{: Python, JavaScript (ES6), Java, C/C++, SQL, HTML/CSS, R} \\
+     \textbf{Frameworks \& Tools}{: FastAPI, Flask, Node.js, Express, React, PyTorch, TensorFlow/Keras, NLTK, Scikit-learn} \\
+     \textbf{Libraries}{: Sentence-Transformers, Transformers, ChromaDB, pytorch-crf, NetworkX, NumPy, pandas, Matplotlib, Torchvision} \\
+     \textbf{Developer Tools}{: Git, Docker, VS Code, PyCharm, Google Cloud Platform, pytest} \\
+     \textbf{Hardware \& Protocols}{: ESP32, INA226, DS18B20, I2C, 1-Wire, WebAssembly}
+    }}
+ \end{itemize}
+
+
+%-------------------------------------------
+\end{document}
