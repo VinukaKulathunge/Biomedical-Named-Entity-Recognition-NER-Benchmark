@@ -1,6 +1,6 @@
 # BC5CDR Disease Named Entity Recognition (NER) Benchmark
 
-This project is a complete, production-ready, modular PyTorch named entity recognition (NER) suite designed to recognize **disease entities** from the **BC5CDR** biomedical corpus. It compares **30 pipeline configurations** (3 Tokenizers × 5 Embeddings × 2 Classification Layers) using a Bidirectional LSTM (BiLSTM) sequence model.
+ Modular PyTorch named entity recognition (NER) suite designed to recognize **disease entities** from the **BC5CDR** biomedical corpus. It compares **30 pipeline configurations** (3 Tokenizers × 5 Embeddings × 2 Classification Layers) using a Bidirectional LSTM (BiLSTM) sequence model.
 
 ---
 
